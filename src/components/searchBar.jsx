@@ -8,7 +8,7 @@ class SearchBar extends React.Component {
             <div className="col-md-8 order-xs-3">
                 <div className="form search-form">
                     <FontAwesomeIcon icon={faSearch} />
-                    <input onInput={this.props.onInput} type="text" className="form-control form-input" placeholder="Search anything..." />
+                    <input onInput={this.props.onInputEvent} type="text" className="form-control form-input" placeholder="Search anything..." />
                 </div>
             </div>
             <div className="col-md-1 col-xs-3 order-xs-2">

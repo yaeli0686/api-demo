@@ -41,3 +41,12 @@ code {
       position:relative;
     }
 }
+.delete{
+  width: 25px;
+position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    box-sizing: content-box;
+    cursor: pointer;
+}

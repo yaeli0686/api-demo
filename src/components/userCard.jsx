@@ -2,7 +2,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
 import React from 'react';
 
-const UserCard = ({ user }) => {
+
+const UserCard = ({ user, onDelete }) => {
 
     let randomColor = () => {
         return "#" + ((1 << 24) * Math.random() | 0).toString(16);
@@ -30,8 +31,12 @@ const UserCard = ({ user }) => {
                     </span>
                     <a href={`tel:${user.cell}`} className="text-truncate">{user.cell}</a>
                 </div>
+                <span onClick={() => onDelete(user.id.value)} className="delete position-absolute">
+                    <svg x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </span>
             </div>
-
         </div>
     );
 }
